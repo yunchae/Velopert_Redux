@@ -54,10 +54,9 @@ class App extends React.Component {
 
         return (
             <div
-                onClick={ this.onClick }
-                style={ centerStyle }
+                onClick={this.onClick}
+                style={centerStyle}
             >
-
                 <h1> {this.props.store.getState().value} </h1>
             </div>
         )
@@ -68,7 +67,7 @@ const store = createStore(counterReducer);
 
 const render = () => {
     const rootElement = document.getElementById('root');
-    ReactDOM.render( <App store={store}/>, rootElement);
+    ReactDOM.render(<App store={store}/>, rootElement);
 }
 
 store.subscribe(render);
